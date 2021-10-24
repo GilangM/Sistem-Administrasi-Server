@@ -8,7 +8,7 @@
 
    
 
-   ![1](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak sas\ss prak sas\1.PNG)
+  ![1](https://user-images.githubusercontent.com/26424175/138599359-4c80e261-9340-4726-978b-0b66d18f8ea3.PNG)
 
 * kemudian jalankan container 
 
@@ -17,7 +17,7 @@ sudo lxc-start -n ubuntu_landing -d
 sudo lxc-attach -n ubuntu_landing
 ```
 
-![image-20211023214202061](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023214202061.png)
+![2](https://user-images.githubusercontent.com/26424175/138599813-8199a121-8052-4ee9-920f-cf272d9d2d05.PNG)
 
 * Ganti IP yang terdapat di ubuntu_landing
 
@@ -25,7 +25,8 @@ sudo lxc-attach -n ubuntu_landing
   nano /etc/network/interfaces
   ```
 
-  ![image-20211023214408842](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023214408842.png)
+  ![3](https://user-images.githubusercontent.com/26424175/138599892-31883b29-fa2b-4c11-b63a-676172aa670f.PNG)
+  
 
 * lakukan Reboot dan pastikan IP telah terganti
 
@@ -33,15 +34,14 @@ sudo lxc-attach -n ubuntu_landing
   reboot
   ```
 
-  ![image-20211023214517408](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023214517408.png)
-
+![4](https://user-images.githubusercontent.com/26424175/138599943-4c38bbd5-21e2-40cf-9180-c4b8f74fcc9d.PNG)
 * Lakukan ping google.com dan pastikan berhasil
 
   ```markdown
   ping google.com
   ```
 
-  ![image-20211023214939066](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023214939066.png)
+ ![5](https://user-images.githubusercontent.com/26424175/138599947-cbdc433f-5e03-4485-a2ac-6cbbbc6cb1ad.PNG)
 
 
 
@@ -53,15 +53,14 @@ sudo lxc-attach -n ubuntu_landing
   sudo lxc-create -n debian_php5.6 -t download -- --dist debian --release stretch --arch amd64 --force-
   ```
 
-![WhatsApp Image 2021-10-24 at 8.43.02 PM](C:\Users\user\Downloads\WhatsApp Image 2021-10-24 at 8.43.02 PM.jpeg)
-
+![WhatsApp Image 2021-10-24 at 8 43 02 PM](https://user-images.githubusercontent.com/26424175/138600132-5f61d38d-8c0d-441c-91e9-39b9414d7c86.jpeg)
 * Download debian_php5.6 telah berhasil
 
   ```markdown
   sudo lxc-ls -f (untuk cek container)
   ```
 
-  ![image-20211023215521262](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023215521262.png)
+ ![6](https://user-images.githubusercontent.com/26424175/138600176-965c3f74-7047-45dd-97ff-7d3ad7fddee5.PNG)
 
 * Start debian_php5.6
 
@@ -70,7 +69,7 @@ sudo lxc-start -n debian_php5.6 -d
 sudo lxc-attach -n debian_php5.6
 ```
 
-![image-20211023215702181](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023215702181.png)
+![8](https://user-images.githubusercontent.com/26424175/138600183-88da154e-6211-4381-b98e-e9e463cc461f.PNG)
 
 
 
@@ -82,7 +81,7 @@ sudo lxc-attach -n debian_php5.6
   apt install nano net-tools curl –y
   ```
 
-  ![image-20211023220029677](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023220029677.png)
+ ![9](https://user-images.githubusercontent.com/26424175/138600233-7cd37dc4-fdfc-42b3-b59d-365fc1a05e96.PNG)
 
 * Lakukan setting ip debian_php5.6 
 
@@ -90,7 +89,7 @@ sudo lxc-attach -n debian_php5.6
   nano /etc/network/interfaces
   ```
 
-  ![image-20211023220220242](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023220220242.png)
+ ![10](https://user-images.githubusercontent.com/26424175/138600249-28f1a2f5-c123-481b-9d7b-be1de071e8a3.PNG)
 
 * Ip pada debian_php5.6 telah berhasil di install
 
@@ -98,7 +97,7 @@ sudo lxc-attach -n debian_php5.6
   ifconfig
   ```
 
-  ![image-20211023220333620](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023220333620.png)
+![11](https://user-images.githubusercontent.com/26424175/138600254-f021dc9b-3ee6-4d73-b2ce-7633c27eca61.PNG)
 
 * Lakukan penginstallan nginx pada debian_php5.6
 
@@ -106,7 +105,7 @@ sudo lxc-attach -n debian_php5.6
   apt install nginx nginx-extras –y
   ```
 
-  ![image-20211023220757404](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023220757404.png)
+ ![12](https://user-images.githubusercontent.com/26424175/138600524-9822ea6a-959e-4b0f-b082-87940f0b12fa.PNG)
 
 * Lakukan setting nginx
 
@@ -116,7 +115,8 @@ sudo lxc-attach -n debian_php5.6
   nano lxc_php5.6.dev
   ```
 
-  ![image-20211023220905545](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023220905545.png)
+![13](https://user-images.githubusercontent.com/26424175/138600539-43a64e44-d03a-4a5b-828c-7e41ed604954.PNG)
+
 
 * Setting nginx 
 
@@ -127,7 +127,7 @@ sudo lxc-attach -n debian_php5.6
   nginx -s reload
   ```
 
-  ![image-20211023221009402](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023221009402.png)
+![14](https://user-images.githubusercontent.com/26424175/138600555-04a69ed0-1b60-4026-b8e3-7f844373ed4b.PNG)
 
 * Lakukan setting hosts 
 
@@ -135,7 +135,7 @@ sudo lxc-attach -n debian_php5.6
   nano /etc/hosts
   ```
 
-  ![image-20211023221052210](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023221052210.png)
+ ![15](https://user-images.githubusercontent.com/26424175/138600331-d92318e7-df82-42fa-81c5-b8cd9c66b25f.PNG)
 
 * Lakukan setting index.html debian_php5.6 
 
@@ -147,7 +147,7 @@ sudo lxc-attach -n debian_php5.6
   cd lxc_php5.6/
   ```
 
-  ![WhatsApp Image 2021-10-24 at 8.43.01 PM](C:\Users\user\Downloads\WhatsApp Image 2021-10-24 at 8.43.01 PM.jpeg)
+  ![WhatsApp Image 2021-10-24 at 8 43 01 PM](https://user-images.githubusercontent.com/26424175/138600587-34335203-3a5c-46b8-9d1f-dc6c3f78870f.jpeg)
 
 * Tambah file index.html 
 
@@ -155,7 +155,8 @@ sudo lxc-attach -n debian_php5.6
   nano index.html
   ```
 
-  ![image-20211023221246290](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023221246290.png)
+  ![17](https://user-images.githubusercontent.com/26424175/138600650-83745d6c-ffaa-4207-969a-f671875b3fde.PNG)
+)
 
 * Setelah curl -I 
 
@@ -163,7 +164,7 @@ sudo lxc-attach -n debian_php5.6
   curl -i http://lxc_php5.dev 
   ```
 
-  ![image-20211023221337189](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023221337189.png)
+ ![18](https://user-images.githubusercontent.com/26424175/138600690-bc8dd15a-c505-46db-a91a-b9a628bc2aec.PNG)
 
 
 
@@ -177,11 +178,12 @@ cd /etc/nginx/sites-available/
 nano lxc_php5.6.dev
 ```
 
-![WhatsApp Image 2021-10-24 at 8.48.17 PM](C:\Users\user\Downloads\WhatsApp Image 2021-10-24 at 8.48.17 PM.jpeg)
+![WhatsApp Image 2021-10-24 at 8 48 17 PM](https://user-images.githubusercontent.com/26424175/138600722-508191f9-7a3d-4f23-93c5-0fa121acc71b.jpeg)
+
 
 * Lakukan setting lxc_landing 
 
-![image-20211023221758790](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023221758790.png)
+![19](https://user-images.githubusercontent.com/26424175/138600872-2c123a42-d282-44af-be32-5005eca0e271.PNG)
 
 * Setting hosts landing
 
@@ -194,9 +196,9 @@ nano lxc_php5.6.dev
   nano /etc/hosts
   ```
 
-  ![image-20211023222008181](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023222008181.png)
+ ![20](https://user-images.githubusercontent.com/26424175/138600906-80fedc6a-9114-4838-888e-d88fc830eb0e.PNG)
 
-![image-20211023222016360](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023222016360.png)
+![15](https://user-images.githubusercontent.com/26424175/138601011-d25c0de0-26be-447d-83d9-c83432da577d.PNG)
 
 * Masuk ke index.html
 
@@ -205,11 +207,11 @@ nano lxc_php5.6.dev
   nano index.html
   ```
 
-  ![image-20211023222107799](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023222107799.png)
+ ![21](https://user-images.githubusercontent.com/26424175/138601091-1f752a14-c317-4493-b7ba-f9cb20e81a30.PNG)
 
 * setting file index landing
 
-![image-20211023222156663](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023222156663.png)
+![22](https://user-images.githubusercontent.com/26424175/138601097-a0327deb-d08b-419a-a7a1-59588244c6b1.PNG)
 
 * Curl I lxc landing
 
@@ -217,8 +219,7 @@ nano lxc_php5.6.dev
   curl -i http://lxc_landing.dev 
   ```
 
-  ![image-20211023222332565](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023222332565.png)
-
+ ![23](https://user-images.githubusercontent.com/26424175/138601104-1a4e783a-e6db-4f87-852c-3031c86819f5.PNG)
 
 
 5. LXC ubuntu_landing harus auto start ketika vm dinyalakan, hal ini digunakan untuk menjaga agar website company profile tidak mengalami downtime
@@ -231,7 +232,7 @@ nano lxc_php5.6.dev
   lxc-ls –f
   ```
 
-  ![image-20211023222834240](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023222834240.png)
+  ![24](https://user-images.githubusercontent.com/26424175/138601111-7328d6fb-6ba5-42ed-8bdd-eec34a1d9957.PNG)
 
 
 
@@ -243,7 +244,7 @@ nano lxc_php5.6.dev
   sudo nano /etc/hosts
   ```
 
-  ![image-20211023223017247](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023223017247.png)
+![25](https://user-images.githubusercontent.com/26424175/138601116-e1858769-2410-4608-adcf-c42eed19e978.PNG)
 
 * Start ubuntu_php7.4
 
@@ -253,8 +254,8 @@ nano lxc_php5.6.dev
   lxc-ls –f
   ```
 
-  ![image-20211023223508071](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023223508071.png)
-
+ ![26](https://user-images.githubusercontent.com/26424175/138601135-9d7d3aa2-653c-420a-b72b-8efe10d0db88.PNG)
+ 
 * Masuk vm.local
 
   ```markdown
@@ -262,11 +263,11 @@ nano lxc_php5.6.dev
   sudo nano vm.local
   ```
 
-  ![WhatsApp Image 2021-10-24 at 8.56.22 PM](C:\Users\user\Downloads\WhatsApp Image 2021-10-24 at 8.56.22 PM.jpeg)
+ ![WhatsApp Image 2021-10-24 at 8 56 22 PM](https://user-images.githubusercontent.com/26424175/138601144-92ded180-5151-4d90-bf94-ecba7389a7ac.jpeg)
 
 * Setting vm.local
 
-![image-20211023224358845](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023224358845.png)
+![27](https://user-images.githubusercontent.com/26424175/138601225-b54c5756-84ad-43d7-8337-7e4a0223839e.PNG)
 
 * Curl vm.local
 
@@ -278,20 +279,20 @@ nano lxc_php5.6.dev
   curl -I http://vm.local
   ```
 
-  ![image-20211023224633386](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023224633386.png)
+ ![28](https://user-images.githubusercontent.com/26424175/138601237-128f3c6b-9a09-4b50-807c-4108716526bf.PNG)
 
 
 
 7. hasil mengakses ketiga url
 
    * mengakses http://vm.local/app akan diartahkan ke http://lxc_php5.dev
+![30](https://user-images.githubusercontent.com/26424175/138601256-4a66b14e-2d14-4ced-96c8-5d40bad1dc4d.PNG)
 
-   ![image-20211023224833174](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023224833174.png)
+*  mengakses http://vm.local/blog akan diarahkan ke http://lxc_php7.dev!
+![31](https://user-images.githubusercontent.com/26424175/138601264-2e9ec531-4cb9-4d1c-9d2d-540396fd3eff.PNG)
 
-*  mengakses http://vm.local/blog akan diarahkan ke http://lxc_php7.dev![image-20211023224854533](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023224854533.png)                
-
-*  mengakses http://vm.local akan diarahkan ke http://lxc_landing.dev![image-20211023224909283](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211023224909283.png)
-
+*  mengakses http://vm.local akan diarahkan ke http://lxc_landing.dev!
+![32](https://user-images.githubusercontent.com/26424175/138601271-39ff0423-7562-43d9-ab63-13871f58b44f.PNG)
  
 
 8. Menyiapkan analisa untuk diserahkan ke CTO
