@@ -12,7 +12,7 @@ Gilang Maulana 1202190011 | Dinda Tresna Teja Nirwana 1202190050
    lxc-ls -f
    ```
 
-   ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 1\soal nomor 1\1.PNG)
+![1](https://user-images.githubusercontent.com/26424175/144717766-3fa669f9-963b-45a9-929b-dee309357716.PNG)
 
 kemudian buat ubuntu focal
 
@@ -20,7 +20,7 @@ kemudian buat ubuntu focal
 sudo lxc-create -n ubuntu_landing -t download -- --dist ubuntu --release focal --arch amd64 --force-cache --no-validate --server images.linuxcontainers.org
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 1\soal nomor 1\2.PNG)
+![2](https://user-images.githubusercontent.com/26424175/144717776-8033dc5e-5ab1-47a8-996b-b1dc6e89d0ef.PNG)
 
 jalankan ubuntu_landing dan instal net-tools
 
@@ -30,18 +30,18 @@ lxc-attach ubuntu_landing
 apt install nano net-tools curl
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 1\soal nomor 1\3.PNG)
+![3](https://user-images.githubusercontent.com/26424175/144717780-d0e77740-a764-4003-a21e-b4dc46b859ff.PNG)
 
 setting ip ubuntu_landing 10.0.3.103/24
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 1\soal nomor 1\4.PNG)
+![4](https://user-images.githubusercontent.com/26424175/144717782-477021f2-d125-4feb-b831-9a326cb37d9b.PNG)
 
 ```markdown
 netplan apply
 ip r
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 1\soal nomor 1\5.PNG)
+![5](https://user-images.githubusercontent.com/26424175/144717785-2dd74305-7442-44f5-815b-6f3ba329e77c.PNG)
 
 konfigurasi ssh server pada ubuntu_landing
 
@@ -49,7 +49,7 @@ konfigurasi ssh server pada ubuntu_landing
 apt install openssh-server phyton -y
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 1\soal nomor 1\6.PNG)
+![6](https://user-images.githubusercontent.com/26424175/144717788-7e0df43a-555c-4704-983a-e3aebbba3125.PNG)
 
 konfigurasi file sshd_config
 
@@ -58,7 +58,7 @@ PermitRootLogin yes
 RSAAuthentication yes
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 1\soal nomor 1\7.PNG)
+![7](https://user-images.githubusercontent.com/26424175/144717791-091c37e7-1e19-4924-b8c1-87ea7ae1cb15.PNG)
 
 ```markdown
 service sshd restart
@@ -66,7 +66,7 @@ passwd
 exit
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 1\soal nomor 1\8.PNG)
+![8](https://user-images.githubusercontent.com/26424175/144717795-7720d95c-f91e-48da-9bfd-2226ff92a53c.PNG)
 
 jalankan ssh server
 
@@ -74,7 +74,7 @@ jalankan ssh server
 ssh root@10.0.3.103
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 1\soal nomor 1\9.PNG)
+![9](https://user-images.githubusercontent.com/26424175/144717798-6dcff425-8190-4f43-9d5c-6323fcac0513.PNG)
 
 2. Rubah LXC php7 dengan ubuntu focal (destroy n create, same ip, same name)
 
@@ -84,13 +84,13 @@ ssh root@10.0.3.103
    lxc-ls -f
    ```
 
-   ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 2\soal nomor 2\1.PNG)
+![1](https://user-images.githubusercontent.com/26424175/144717865-11f2f67f-d9b2-466c-94f2-6bd4d1bad1cb.PNG)
 
 ```markdown
 sudo lxc-create -n ubuntu_php7.4 -t download -- --dist ubuntu --release focal --arch amd64 --force-cache --no-validate --server images.linuxcontainers.org
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 2\soal nomor 2\2.PNG)
+![2](https://user-images.githubusercontent.com/26424175/144717866-92b249e1-ac1b-4f8a-b02f-6b230cb27ff7.PNG)
 
 jalankan lxc 
 
@@ -100,18 +100,18 @@ lxc-attach ubuntu_php7.4
 apt install nano net-tools curl
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 2\soal nomor 2\3.PNG)
+![3](https://user-images.githubusercontent.com/26424175/144717868-1af35975-0f27-4bf8-9bde-f06edb0996a4.PNG)
 
 setting ip menjadi 10.10.3.101/24
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 2\soal nomor 2\4.PNG)
+![4](https://user-images.githubusercontent.com/26424175/144717869-4294f024-f136-4104-a18b-be9d6215ba42.PNG)
 
 ```markdown
 netplan apply
 ip r
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 2\soal nomor 2\5.PNG)
+![5](https://user-images.githubusercontent.com/26424175/144717874-f4940482-0e61-4062-8b04-30abc52e85cd.PNG)
 
 kemudian instal ssh server
 
@@ -119,7 +119,7 @@ kemudian instal ssh server
 apt-get install openssh-server -y
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 2\soal nomor 2\6.PNG)
+![6](https://user-images.githubusercontent.com/26424175/144717877-bcbb9ee7-2767-42e6-9259-fbf7107003ed.PNG)
 
 konfigurasi file sshd_config
 
@@ -128,18 +128,18 @@ PermitRootLogin yes
 RASAAuthentication yes
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 2\soal nomor 2\7.PNG)
+![7](https://user-images.githubusercontent.com/26424175/144717881-27030d00-7611-41d2-a29f-37b836ce5b77.PNG)
 
 ```markdown
 service sshd restart
 passwd
 ```
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 2\soal nomor 2\8.PNG)
+![8](https://user-images.githubusercontent.com/26424175/144717884-541e7146-4e4a-4acc-a82a-f9e5c84a1ce9.PNG)
 
 jalankan ssh server
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\soal nomor 2\soal nomor 2\9.PNG)
+![9](https://user-images.githubusercontent.com/26424175/144717887-4fa9ed58-a6fd-4132-82c5-16721d4c8829.PNG)
 
 3. vm.local/
 
@@ -150,7 +150,7 @@ jalankan ssh server
      cd laravel/
      ```
 
-     ![](C:\Users\user\Documents\SAS no 3\1.PNG)
+![1](https://user-images.githubusercontent.com/26424175/144717926-11472285-da56-4349-bf69-7364b590c58d.PNG)
 
 * Setelah membuat directory laravel 8, maka langkah selanjutnya yaitu mengatur konfigurasi ansible di nano hosts dan nano nginxphp.yml
 
@@ -160,7 +160,7 @@ jalankan ssh server
   ubuntu_landing ansible_host=lxc_landing.dev ansible_ssh_user=root ansible_become_pass=1234
   ```
 
-  ![](C:\Users\user\Documents\SAS no 3\2.PNG)
+![2](https://user-images.githubusercontent.com/26424175/144717927-9bcf6b5d-9429-4c36-ac72-7eb845f5eb8c.PNG)
 
 ```markdown
 nano nginxphp.yml
@@ -210,7 +210,7 @@ nano nginxphp.yml
 
 ```
 
-![](C:\Users\user\Documents\SAS no 3\3.PNG)
+![3](https://user-images.githubusercontent.com/26424175/144717928-3b7c329b-0f7c-489d-aa30-85a20c04c22a.PNG)
 
 * Setelah berhasil di konfigurasi, maka langkah selanjutnya yaitu mencoba untuk menjalankan ansible playbook nginxphp.yml
 
@@ -218,7 +218,7 @@ nano nginxphp.yml
   ansible-playbook -i hosts nginxphp.yml -k
   ```
 
-  ![](C:\Users\user\Documents\SAS no 3\4.PNG)
+![4](https://user-images.githubusercontent.com/26424175/144717930-2bcc6ec4-d0b8-42a3-97a4-6dafd6276ab5.PNG)
 
 * Setelah berhasil dijalankan, maka step selanjutnya yaitu membuat file installcomposer.yml
 
@@ -290,7 +290,7 @@ nano nginxphp.yml
   
   ```
 
-  ![](C:\Users\user\Documents\SAS no 3\5.PNG)
+![5](https://user-images.githubusercontent.com/26424175/144717933-56d6d050-9a22-4482-8269-e8f59eb8e5d7.PNG)
 
 * Setelah membuat file install composer.yml, maka langkah selanjutnya yaitu menjalankan ansible playbook installcomposer.yml
 
@@ -298,7 +298,7 @@ nano nginxphp.yml
   ansible-playbook -i hosts installcomposer.yml -k
   ```
 
-  ![](C:\Users\user\Documents\SAS no 3\6.PNG)
+![6](https://user-images.githubusercontent.com/26424175/144717934-32614a6e-b75a-4df6-bd1d-4fc42140feaf.PNG)
 
 * Setelah berhasil dijalankan, maka langkah selanjutnya yaitu setting lxc_landing.dev
 
@@ -329,7 +329,7 @@ server {
 }
 ```
 
-![](C:\Users\user\Documents\SAS no 3\7.PNG)
+![7](https://user-images.githubusercontent.com/26424175/144717937-9e7ad5e9-08eb-447d-9ee0-326605d828b5.PNG)
 
 * setelah setting lxc_landing dilakukan, maka step selanjutnya yaitu setting config.yml
 
@@ -384,7 +384,7 @@ nano config.yml
 
 ```
 
-![](C:\Users\user\Documents\SAS no 3\8.PNG)
+![8](https://user-images.githubusercontent.com/26424175/144717940-a75baeb2-fa66-4763-950f-ef41cf4c4617.PNG)
 
 * Setelah setting config.yml, maka langkah selanajutnya yaitu coba memanggil config.yml
 
@@ -392,11 +392,11 @@ nano config.yml
    ansible-playbook -i hosts config.yml -k
   ```
 
-  ![](C:\Users\user\Documents\SAS no 3\9.PNG)
+![9](https://user-images.githubusercontent.com/26424175/144717942-03030fb3-9d64-48ce-8885-8f747e7a5978.PNG)
 
 * Setelah berhasil dijalankan, maka langkah step selanjutnya yaitu mengakses url vm.local
 
-  ![](C:\Users\user\Documents\SAS no 3\10.PNG)
+![10](https://user-images.githubusercontent.com/26424175/144717945-a116f288-a83e-4745-86b8-040c9944d087.PNG)
 
 4. vm.local/blog
 
@@ -408,7 +408,7 @@ nano config.yml
      cd wordpress/
      ```
 
-     ![](C:\Users\user\Documents\SAS no 4\1.PNG)
+![1](https://user-images.githubusercontent.com/26424175/144717998-49fa0a45-fa07-44a0-8c04-a81abfd5dc45.PNG)
 
 * Setelah berhasil install, maka langkah selanjutnya yaitu masuk dan setting wordpress nano host
 
@@ -416,7 +416,7 @@ nano config.yml
   nano hosts
   ```
 
-  ![](C:\Users\user\Documents\SAS no 4\2.PNG)
+![2](https://user-images.githubusercontent.com/26424175/144718003-80da26c8-fce5-47d3-8bb3-d472864068ff.PNG)
 
 * Setelah setting wordpress nano hosts, maka step selanjutnya yaitu setting nano installwordpress.yml
 
@@ -520,7 +520,7 @@ nano config.yml
   
   ```
 
-  ![](C:\Users\user\Documents\SAS no 4\3.PNG)
+![3](https://user-images.githubusercontent.com/26424175/144718006-e7e947f6-facd-4703-ac5f-0ed3edac32ca.PNG)
 
 * Lalu, langkah selanjutnya yaitu setting nano wp.conf
 
@@ -631,7 +631,7 @@ nano config.yml
   
   ```
 
-  ![](C:\Users\user\Documents\SAS no 4\4.PNG)
+![4](https://user-images.githubusercontent.com/26424175/144718008-3b1d3ef4-84cb-47db-8141-075953280c15.PNG)
 
 * Setelah setting di nano wp.conf, maka langkah selanjutnya yaitu setting di nano wordpress.conf
 
@@ -672,7 +672,7 @@ nano config.yml
   
   ```
 
-  ![](C:\Users\user\Documents\SAS no 4\5.PNG)
+![5](https://user-images.githubusercontent.com/26424175/144718011-9c3d263d-2e89-4008-928d-f868417ba49f.PNG)
 
 * Setelah setting di nano wordpress.conf, maka step selanjutnya yaitu mencoba memanggil hosts installwordpress.yml
 
@@ -680,20 +680,20 @@ nano config.yml
   sudo ansible-playbook -i hosts installwordpress.yml -k
   ```
 
-  ![](C:\Users\user\Documents\SAS no 4\6.PNG)
+![6](https://user-images.githubusercontent.com/26424175/144718013-e748b60e-b873-44bb-990f-e4d19aabcc4f.PNG)
 
 * Setelah ansible playbook installwordpress.yml berhasil dijalankan, maka step terakhir yaitu akses url vm.local/blog
 
-  ![](C:\Users\user\Documents\SAS no 4\7.PNG)
+![7](https://user-images.githubusercontent.com/26424175/144718016-7b7f8acb-8414-4d7a-b8b8-127626c7154c.PNG)
 
 * Coba sign in atau membuat akun wordpress yang berisi title (judul), username dan juga password
 
-  ![](C:\Users\user\Documents\SAS no 4\8.PNG)
+![8](https://user-images.githubusercontent.com/26424175/144718018-2106619b-7614-42e2-a5b3-14e86ae9d515.PNG)
 
 * Setelah itu kita coba login wordpress dengan username dan password yang sudah dibuat tadi
 
-![](C:\Users\user\Documents\SAS no 4\9.PNG)
+![9](https://user-images.githubusercontent.com/26424175/144718021-5473be80-3477-4666-b64b-be50258be01a.PNG)
 
 * Setelah login, maka akan terdapat tampilan dashboard wordpress seperti gambar dibawah ini
-* ![](C:\Users\user\Documents\SAS no 4\10.PNG)
+![10](https://user-images.githubusercontent.com/26424175/144718023-6363d13a-e29f-460d-84e6-2f5c552fe223.PNG)
 
