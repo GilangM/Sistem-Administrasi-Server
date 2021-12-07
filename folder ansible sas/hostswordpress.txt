@@ -1,0 +1,2 @@
+[wordpress]
+ubuntu_php7.4 ansible_host=lxc_php7.dev anisble_ssh_user=root ansible_becom>
