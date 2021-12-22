@@ -26,7 +26,7 @@
            - dnsutils
   ```
 
-  ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\1.PNG)
+![1](https://user-images.githubusercontent.com/26424175/147068332-e0f1e0f1-dc31-4ae8-922d-5fff356a456c.PNG)
 
 * Run or install ansible playbook larav.yml
 
@@ -34,7 +34,7 @@
   ansible-playbook -i hosts larav.yml -k
   ```
 
-  ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\2.PNG)
+![2](https://user-images.githubusercontent.com/26424175/147068343-26ceece7-0a84-43f0-a72a-826f6d3e191c.PNG)
 
 * Create a new file config2.yml
 
@@ -94,7 +94,7 @@
        action: service name=bind9 state=restarted
   ```
 
-  ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\3.PNG)
+![3](https://user-images.githubusercontent.com/26424175/147068347-7e555816-42d1-4356-87b7-4984d23c4108.PNG)
 
 * Run or install ansible playbook config2.yml
 
@@ -102,7 +102,7 @@
   ansible-playbook -i hosts config2.yml -k
   ```
 
-  ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\4.PNG)
+![4](https://user-images.githubusercontent.com/26424175/147068351-c3976032-a9f7-4158-9ab9-a5438347019d.PNG)
 
 * Add this in file hosts
 
@@ -111,7 +111,7 @@
   10.0.3.103	dev.vm.local	
   ```
 
-  ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\5.PNG)
+![5](https://user-images.githubusercontent.com/26424175/147068359-a8c126e2-8ed0-4a37-a3d5-80b98a42e329.PNG)
 
 * Log in to root ubuntulanding then edit vm.local
 
@@ -119,7 +119,7 @@
   ssh root@lxc_landing.dev
   ```
 
-  ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\6.PNG)
+![6](https://user-images.githubusercontent.com/26424175/147068371-d22555d2-85e5-4a9f-b973-1ba228de0833.PNG)
 
 * Write in vm.local, then add line www
 
@@ -127,7 +127,7 @@
   nano /var/www/html/dev/landing/vm.local
   ```
 
-  ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\7.PNG)
+![7](https://user-images.githubusercontent.com/26424175/147068376-955615ea-ceb7-456c-a5a2-36d375912c30.PNG)
 
 * The next step is edit vm.local. Add dev.vm.local
 
@@ -136,11 +136,11 @@
   dev.vm.local
   ```
 
-  ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\8.PNG)
+![8](https://user-images.githubusercontent.com/26424175/147068383-2600213b-cc21-4a2c-b4b0-71cb2be16317.PNG)
 
 * Edit file vm.local in directory bind. Add line dev
 
-  ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\9.PNG)
+![9](https://user-images.githubusercontent.com/26424175/147068385-ab7e779f-8b53-43aa-a7b5-86c62777e7c2.PNG)
 
 * For the last step, do a restart for all services.
 
@@ -150,10 +150,10 @@
   sudo /etc/init.d/named restart
   ```
 
-  ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\10.PNG)
+![10](https://user-images.githubusercontent.com/26424175/147068397-52d64e65-6e0e-4142-95db-015a0b13fac0.PNG)
 
 * To check your configuration, open the browser and search for dev.vm.local and dev.vm.local/blog
 
-  ![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\11.PNG)
+![11](https://user-images.githubusercontent.com/26424175/147068406-11d7da9a-f05e-4a9a-b0c8-de978f5c4fcc.PNG)
 
-![](E:\KULIAH\Semester 5\Sistem Administrasi Server\ss prak 4\12.PNG)
+![12](https://user-images.githubusercontent.com/26424175/147068415-4f0bd03f-3c09-4f56-9924-a9ebc008b17f.PNG)
