@@ -159,7 +159,7 @@ ff02::2 ip6-allrouters
 
 - Setting hosts ansible
 
-  ![](C:\Users\Lenovo\Downloads\koding\koding\setting host ansible.PNG)
+  ![setting host ansible](https://user-images.githubusercontent.com/26424175/152106073-858e0603-e142-4e11-8a74-2d361197b318.PNG)ve.PNG)
 
   ```
   [database]
